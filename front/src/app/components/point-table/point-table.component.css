@@ -1,0 +1,39 @@
+.point-table{
+  text-align: center;
+  border-collapse: collapse;
+
+  background-color: white;
+}
+
+.point-table th,td{
+  border: 1px solid #eaeaea;
+}
+
+.point-table thead td{
+  background-color: #252525;
+  border: 1px solid #252525;
+  color: white;
+}
+
+.point-table tr:nth-child(2n){
+  background-color: #eaeaea;
+}
+
+thead{
+  column-rule-color: #3398fe;
+}
+
+/* TABLET */
+@media (min-width: 797px) and (max-width: 1040px) {
+  .point-table{
+    width: 700px;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 797px) {
+  .point-table{
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="point-form">
+  <div class="point-form-row">
+    <label for="x">X: </label>
+    <select name="x" id="x" [formControl]="x">
+      <option *ngFor="let xVal of xValues" [value]="xVal">{{xVal}}</option>
+    </select>
+  </div>
+
+  <div class="point-form-row">
+    <label for="y">Y: </label>
+    <input type="text" id="y" [formControl]="y">
+  </div>
+
+  <div class="point-form-row">
+    <label for="r">R: </label>
+    <select name="r" id="r" [formControl]="_r" (input)="setR($event)">
+      <option *ngFor="let rVal of rValues" [value]="rVal">{{rVal}}</option>
+    </select>
+  </div>
+
+  <div class="point-form-row">
+    <button class="point-form-btn" (click)="submit()">Отправить</button>
+    <button class="point-form-btn" (click)="reset()">Очистить</button>
+  </div>
+</div>
